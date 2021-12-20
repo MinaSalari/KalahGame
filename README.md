@@ -4,13 +4,13 @@
 This is a *Java RESTful Web Service*  that runs a game of 6-stone Kalah. This web service enables 2 human players to play the game, each in his own computer. There is no AI implemented.
 
 ## Kalah Rules
-###Board Setup
+### Board Setup
 
 Each of the two players has his six pits in front of him. To the right of the six pits,
 each player has a larger pit. At the start of the game, there are six stones in each
 of the six round pits .
 
-###Rules
+### Rules
 
 Game Play
 
@@ -65,7 +65,7 @@ API endpoint documentation: <http://localhost:8080/swagger-ui.html>
 
 
 ## Instruction
-###Start
+### Start
 
 To start the game, first you need to create a Game. To do so, call this endpoint:
 ```
@@ -77,7 +77,7 @@ curl -i -X POST -H "Content-Type: application/json" http://localhost:8080/kalahG
 
 * Note that, to boost security, the endpoint above generates a ticket for your game that you should set in the header of following request.
 
-###Play
+### Play
 To play the game, if its your turn you can call this endpoint:
 ```
 curl -i -X PUT -H -H "Content-Type: application/json" -H "Game-Ticket:{gameTicket}" http://localhost:8080/kalahGame/play/{gameId}/{pitId}
